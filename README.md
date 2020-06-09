@@ -59,6 +59,7 @@ The **Spread the Word** MVP will meet the requirements below for both front end 
 
 #### Wireframes
 Login/Signup Flow
+![login/signup](`./images/login-signup.png`)
   - https://app.lucidchart.com/invitations/accept/e56b336a-bfd2-49ca-93c9-63316fa657fa
 
 Index Articles
