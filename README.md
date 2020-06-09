@@ -59,18 +59,17 @@ The **Spread the Word** MVP will meet the requirements below for both front end 
 
 #### Wireframes
 Login/Signup Flow
-![login/signup](`./images/login-signup.png`)
-  - https://app.lucidchart.com/invitations/accept/e56b336a-bfd2-49ca-93c9-63316fa657fa
+<img src="https://imgur.com/NRDybtk" alt= "Login/Signup" width="50%"/>
 
 Index Articles
-  - https://app.lucidchart.com/invitations/accept/a0f523dc-1f62-4303-a7c8-9afbe67825db
+<img src="https://imgur.com/dszAJOE" alt= "index" width="50%"/>
   
 Solo Article
-  - https://app.lucidchart.com/invitations/accept/713d6210-80be-4bdc-b6ac-469a176ef474
+ <img src="https://imgur.com/TkKkq71" alt= "SoloArticle" width="50%"/>
 
 #### Component Tree
 
-https://app.lucidchart.com/invitations/accept/6e863470-ddf9-4a13-8bfd-e0b1b40b145a
+<img src="https://i.imgur.com/gLFMTlX.png" alt= "component tree" width="50%"/>
 
 
 #### Component Hierarchy
@@ -129,7 +128,7 @@ src
 
 #### ERD Model
 
-> https://app.lucidchart.com/invitations/accept/707735c2-1ed0-4710-88fa-59598677b847
+<img src="https://i.imgur.com/LPPx4lq.png" alt= "ERD" width="50%"/>
 
 <br>
 
