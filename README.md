@@ -58,18 +58,28 @@ The **Spread the Word** MVP will meet the requirements below for both front end 
 <br>
 
 #### Wireframes
-##Login/Signup Flow
-<img src="https://imgur.com/NRDybtk.png" alt= "Login/Signup" width="50%"/>
 
-##Index Articles
-<img src="https://imgur.com/dszAJOE.png" alt= "index" width="50%"/>
+**Login/Signup Flow**
+<img src="https://imgur.com/NRDybtk.png" alt= "Login/Signup" width="30%"/>
+<br>
+
+
+
+**Index Articles**
+<img src="https://imgur.com/dszAJOE.png" alt= "index" width="30%"/>
+<br>
+
   
-##Solo Article
- <img src="https://imgur.com/TkKkq71.png" alt= "SoloArticle" width="50%"/>
+**Solo Article**
+ <img src="https://imgur.com/TkKkq71.png" alt= "SoloArticle" width="30%"/>
+<br> 
+ 
 
 #### Component Tree
 
-<img src="https://i.imgur.com/gLFMTlX.png" alt= "component tree" width="50%"/>
+<img src="https://i.imgur.com/gLFMTlX.png" alt= "component tree" width="30%"/>
+
+
 
 
 #### Component Hierarchy
