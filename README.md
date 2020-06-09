@@ -5,7 +5,6 @@
 ## Table of Contents <!-- omit in toc -->
 - [Overview](#overview)
 - [MVP](#mvp)
-  - [Libraries](#libraries)
   - [Client (Front End)](#client-front-end)
     - [Wireframes](#wireframes)
     - [Component Tree](#component-tree)
