@@ -5,7 +5,6 @@
 ## Table of Contents <!-- omit in toc -->
 - [Overview](#overview)
 - [MVP](#mvp)
-  - [Goals](#goals)
   - [Libraries](#libraries)
   - [Client (Front End)](#client-front-end)
     - [Wireframes](#wireframes)
@@ -22,7 +21,6 @@
 # OVERVIEW
 
 **Spread The Word** is the beginning of an online space for lesser known content creators across Youtube and Twitch. This app will act as a hub for new and upcoming content creators to share resources and help each others channels gain some traction. This space is to be used to highlight the smaller channels and help spread their mission statement to those who may be interested, as well as advice articles posted by the admins of the site.
-
 
 <br>
 
@@ -62,46 +60,36 @@ The **Spread the Word** MVP will meet the requirements below for both front end 
 <br>
 
 #### Wireframes
+Login/Signup Flow
+  - https://app.lucidchart.com/invitations/accept/e56b336a-bfd2-49ca-93c9-63316fa657fa
 
-![Dummy Link](https://app.lucidchart.com/invitations/accept/e56b336a-bfd2-49ca-93c9-63316fa657fa)
-
-- User Login/Sign Up Flow
+Index Articles
+  - https://app.lucidchart.com/invitations/accept/a0f523dc-1f62-4303-a7c8-9afbe67825db
+  
+Solo Article
+  - https://app.lucidchart.com/invitations/accept/713d6210-80be-4bdc-b6ac-469a176ef474
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+https://app.lucidchart.com/invitations/accept/6e863470-ddf9-4a13-8bfd-e0b1b40b145a
+
 
 #### Component Hierarchy
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
 ``` structure
-
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
+
 |__ components/
       |__ Header.jsx
+      |__ Nav.jsx
+      |__ MainBody.jsx
+      |__ Article.jsx
+      |__ ArticlePage.jsx
+      |__ ArticleCreate.jsx
+      |__ Comment.jsx
+      |__ AdminEdit.jsx
+      |__ UserEdit.jsx
 |__ services/
 ```
-
-
-> [Project 4 README Template](./README-template.md)
-
-> ["How detailed should wireframes be?"](https://justuxdesign.com/blog/wireframe-fidelity)
->
-> [Wireframe.cc](https://wireframe.cc/)
-
-> [lucidchart](https://www.lucidchart.com/)
->
-> [draw.io](https://www.draw.io/)
->
-> [ERDPlus](https://erdplus.com/)
-
-
 <br>
 #### Component Breakdown
 
@@ -135,16 +123,13 @@ src
 | User Profile Crud   |    H     |     6 hrs      |               |    TBD      |
 | Total               |          |     36 hrs      |               |    TBD      |
 
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
-
 <br>
 
 ### Server (Back End)
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model.
+> https://app.lucidchart.com/invitations/accept/707735c2-1ed0-4710-88fa-59598677b847
 
 <br>
 
@@ -152,14 +137,15 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Search Function for posts
+- Ban options for admin
+- Sponsors corner
+- Author bios
+- Sub forum
 
 ***
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
 
 ## Code Issues & Resolutions
-
-> Use this section to list of all major issues encountered and their resolution, if you'd like.
