@@ -21,14 +21,14 @@
 
 # OVERVIEW
 
-_**Spread The Word** is the beginning of an online space for lesser known content creators across Youtube and Twitch. This app will act as a hub for new and upcoming content creators to share resources and help each others channels gain some traction. This space is to be used to highlight the smaller channels and help spread their mission statement to those who may be interested, as well as advice articles posted by the admins of the site.
+**Spread The Word** is the beginning of an online space for lesser known content creators across Youtube and Twitch. This app will act as a hub for new and upcoming content creators to share resources and help each others channels gain some traction. This space is to be used to highlight the smaller channels and help spread their mission statement to those who may be interested, as well as advice articles posted by the admins of the site.
 
 
 <br>
 
 ## MVP
 
-_The **Spread the Word** MVP will meet the requirements below for both front end and back end operations.
+The **Spread the Word** MVP will meet the requirements below for both front end and back end operations.
 
 ### Server (Back End) <!-- omit in toc -->
 
@@ -61,6 +61,33 @@ _The **Spread the Word** MVP will meet the requirements below for both front end
 
 <br>
 
+#### Wireframes
+
+![Dummy Link](https://app.lucidchart.com/invitations/accept/e56b336a-bfd2-49ca-93c9-63316fa657fa)
+
+- User Login/Sign Up Flow
+
+#### Component Tree
+
+> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+
+#### Component Hierarchy
+
+> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
+
+``` structure
+
+src
+|__ assets/
+      |__ fonts
+      |__ graphics
+      |__ images
+      |__ mockups
+|__ components/
+      |__ Header.jsx
+|__ services/
+```
+
 
 > [Project 4 README Template](./README-template.md)
 
@@ -76,4 +103,63 @@ _The **Spread the Word** MVP will meet the requirements below for both front end
 
 
 <br>
+#### Component Breakdown
 
+> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
+
+|  Component   |    Type    | state | props | Description                                                      |
+| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo (Persistant)._  |
+|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to past articles._ |
+|    MainBody    | functional |   Y   |   n   | _This will display on main page along with brief description._ |
+|   Article    |   class    |   Y   |   n   | _The Article component will be what displays a complete article._ |
+|    ArticlePage    | functional |   Y   |   n   | _This will display one article along with comment section._ |
+|    ArticleCreate    | class |   Y   |   n   | _This will display one article along with comment section._ |
+| Comment Section | class |   Y   |   n   | _Users can comment ._                 |
+|    Admin edit    | functional |   Y   |   n   | _Page where admin can edit any post._ |
+|    user profile edit    | functional |   Y   |   n   | _Page where user can edit their personal info._ |
+
+
+#### Component Estimates
+
+| Task                | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------- | :------: | :------------: | :-----------: | :---------: |
+| Header integration  |    L     |     1 hr       |               |    TBD      |
+| NAV Bar integration |    L     |     2 hrs      |               |    TBD      |
+| Styling for Main    |    L     |     3 hrs      |               |    TBD      |
+| Article Layout      |    H     |     4 hrs      |               |    TBD      |
+| Article Page Layout |    L     |     3 hrs      |               |    TBD      |
+| Article Crud action |    H     |     4 hrs      |               |    TBD      |
+| Comment section Crud|    H     |     4 hrs      |               |    TBD      |
+| Admin Crud          |    H     |     6 hrs      |               |    TBD      |
+| User Profile Crud   |    H     |     6 hrs      |               |    TBD      |
+| Total               |          |     36 hrs      |               |    TBD      |
+
+
+> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+
+<br>
+
+### Server (Back End)
+
+#### ERD Model
+
+> Use this section to display an image of a computer generated ERD model.
+
+<br>
+
+***
+
+## Post-MVP
+
+> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+
+***
+
+## Code Showcase
+
+> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
+## Code Issues & Resolutions
+
+> Use this section to list of all major issues encountered and their resolution, if you'd like.
