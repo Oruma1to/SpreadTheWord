@@ -29,7 +29,6 @@
 The **Spread the Word** MVP will meet the requirements below for both front end and back end operations.
 
 ### Server (Back End) <!-- omit in toc -->
-
 - Will utilize a **RESTful JSON API**.
   - This will be built using Ruby On Rails
   - The database will contain the 4 following tables:
@@ -75,7 +74,7 @@ https://app.lucidchart.com/invitations/accept/6e863470-ddf9-4a13-8bfd-e0b1b40b14
 
 
 #### Component Hierarchy
-``` structure
+``` 
 src
 
 |__ components/
@@ -91,6 +90,7 @@ src
 |__ services/
 ```
 <br>
+
 #### Component Breakdown
 
 > Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
