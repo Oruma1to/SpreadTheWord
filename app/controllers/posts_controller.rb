@@ -5,9 +5,10 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all
+    @user = User.find(params[:user_id])
+    @posts = Post.where(user_id: @user.id)
 
-    render json: @posts
+    render json: @posts, include: :user, status: :ok
   end
 
   # GET /posts/1

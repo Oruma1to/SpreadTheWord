@@ -1,11 +1,15 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :update, :destroy]
+  before_action :set_comment, only: %i[show update destroy]
 
   # GET /comments
   def index
-    @comments = Comment.all
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:post_id])
+    @comments = Comment.where(post_id: @post.id)
 
-    render json: @comments
+    render json: @comments.to_json(include: { post: { include: :user } }), status: :ok
   end
 
   # GET /comments/1
@@ -39,13 +43,14 @@ class CommentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_comment
-      @comment = Comment.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def comment_params
-      params.require(:comment).permit(:content)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_comment
+    @comment = Comment.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def comment_params
+    params.require(:comment).permit(:content)
+  end
 end
