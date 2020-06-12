@@ -5,6 +5,11 @@ export const getAllPosts = async () => {
   return resp.data
 }
 
+export const allPostsOnly = async () => {
+  const resp = await api.get('/posts')
+  return resp.data
+}
+
 export const getPost = async (id) => {
   const resp = await api.get(`/users/:id/posts/${id}`)
   return resp.data
