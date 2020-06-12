@@ -39,14 +39,14 @@ export default class SignIn extends Component {
         <label htmlFor="password">Password:
         <input 
             id="password"
-            type="text"
+            type="password"
             name="password"
             value={password}
             onChange={this.handleChange}
         />
         </label>
         <br />
-        <Link to="/user/login" />
+        <Link to="/user/register">Register</Link>
         <button>Submit</button>
       </form>
     )
