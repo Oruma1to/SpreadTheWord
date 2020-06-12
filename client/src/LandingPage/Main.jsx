@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 import SignIn from '../AuthComponents/SignIn'
 import { getAllUsers, createUser, deleteUser } from '../services/users'
 import { getAllPosts } from '../services/posts'
+import SignUp from '../AuthComponents/SignUp'
 
 export default class Main extends Component {
   state = {
@@ -34,7 +35,7 @@ export default class Main extends Component {
   obliterateUser = async (id) => {
     await deleteUser(id)
     this.setState(prevState => ({
-      users: prevState.users.filter(user => user.id !==id)
+      users: prevState.users.filter(user => user.id !== id)
     }))
   }
 
@@ -57,7 +58,12 @@ export default class Main extends Component {
             handleLoginSubmit={this.props.handleLoginSubmit}
           />
         )} />
-
+        <Route path='/user/register' render={(props) => (
+          <SignUp
+            {...props}
+            handleRegisterSubmit={this.props.handleRegisterSubmit}
+          />
+        )} />
       </main>
     )
   }
