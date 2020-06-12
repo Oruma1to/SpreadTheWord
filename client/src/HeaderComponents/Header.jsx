@@ -1,11 +1,13 @@
 import React from 'react'
+import './Header.css'
+import HeaderNav from './HeaderNav'
 
 export default function Header() {
   return (
-    <div>
-      <Header>
-        
-      </Header>
+    <div className="header-container">
+      <div className="nav-container">
+        <HeaderNav />
+      </div>
     </div>
   )
 }
