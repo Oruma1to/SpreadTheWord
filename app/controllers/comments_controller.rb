@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comments = Comment.where(post_id: @post.id)
 
-    render json: @comments.to_json(include: { post: { include: :user } }), status: :ok
+    render json: @comments.to_json(include: { post: { include: { user: { only: %i[username admin] } } } }), status: :ok
   end
 
   # GET /comments/1
