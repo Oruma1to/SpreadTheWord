@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export default class SignUp extends Component {
+export default class Register extends Component {
   state = {
     username: "",
     email: "",
@@ -8,15 +8,15 @@ export default class SignUp extends Component {
   }
 
   handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     this.setState({
       [name]: value
     })
   }
 
   render() {
-    const { username, email, password } = this.state
-    const { handleRegisterSubmit, history } = this.props
+    const { username, email, password } = this.state;
+    const { handleRegisterSubmit, history } = this.props;
     return (
       <form onSubmit={(e) => {
         e.preventDefault();
@@ -28,8 +28,8 @@ export default class SignUp extends Component {
           password: ""
         })
       }}>
-        <h3>Sign Up!</h3>
-        <label htmlFor="username">username:
+        <h3>Register</h3>
+        <label htmlFor="username">Username:
           <input
             id="username"
             type="text"
@@ -39,7 +39,7 @@ export default class SignUp extends Component {
           />
         </label>
         <br />
-        <label htmlFor="email">email:
+        <label htmlFor="email">Email:
           <input
             id="email"
             type="text"
@@ -49,7 +49,7 @@ export default class SignUp extends Component {
           />
         </label>
         <br />
-        <label htmlFor="password">password:
+        <label htmlFor="password">Password:
           <input
             id="password"
             type="password"

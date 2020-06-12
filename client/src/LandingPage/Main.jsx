@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import SignIn from '../AuthComponents/SignIn'
 import { getAllUsers, createUser, deleteUser } from '../services/users'
-import { getAllPosts } from '../services/posts'
+import { allPostsOnly } from '../services/posts'
 import SignUp from '../AuthComponents/SignUp'
 
 export default class Main extends Component {
@@ -43,7 +43,7 @@ export default class Main extends Component {
   // ========== Posts ===========
   // ============================
   getPosts = async () => {
-    const posts = await getAllPosts()
+    const posts = await allPostsOnly()
     this.setState({ posts })
   }
 
