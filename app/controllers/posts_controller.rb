@@ -11,6 +11,13 @@ class PostsController < ApplicationController
     render json: @posts, include: { user: { only: %i[username admin] } }, status: :ok
   end
 
+  # GET /posts
+  def all
+    @posts = Post.all
+
+    render json: @posts, include: { user: { only: %i[username admin] } }, status: :ok
+  end
+
   # GET /posts/1
   def show
     render json: @post
