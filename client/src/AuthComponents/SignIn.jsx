@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import './SignIn.css'
 
 export default class Login extends Component {
   constructor(props) {
@@ -22,39 +23,49 @@ export default class Login extends Component {
     const { username, password } = this.state;
     const { handleLoginSubmit, history } = this.props;
     return (
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        handleLoginSubmit(this.state);
-        history.push('/');
-        this.setState({
-          username: "",
-          password: ""
-        })
-      }}>
-        <h3>Login</h3>
-        <label htmlFor="username">username:
-          <input
-            id="username"
-            type="text"
-            name="username"
-            value={username}
-            onChange={this.handleChange}
-          />
-        </label>
-        <br />
-        <label htmlFor="password">password:
-          <input
-            id="password"
-            type="password"
-            name="password"
-            value={password}
-            onChange={this.handleChange}
-          />
-        </label>
-        <br />
-        <Link to='/user/register'>Register</Link>
-        <button>Submit</button>
-      </form>
+      <div className="signin-container">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleLoginSubmit(this.state);
+            history.push('/');
+            this.setState({
+              username: "",
+              password: ""
+            })
+          }}>
+          <h3 className="form-title">Sign In</h3>
+          <div className="signin-label">
+            <label htmlFor="username">
+              <input
+                className="input-lbl"
+                id="username"
+                type="text"
+                name="username"
+                placeholder="Username"
+                value={username}
+                onChange={this.handleChange}
+              />
+            </label>
+          </div>
+          <br />
+          <div className="signin-label">
+            <label htmlFor="password">
+              <input
+                className="input-lbl"
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={password}
+                onChange={this.handleChange}
+              />
+            </label>
+          </div>
+          <br />
+          <button className="signup-btn">Sign In</button>
+        </form>
+      </div>
     )
   }
 }

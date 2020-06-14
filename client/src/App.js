@@ -47,6 +47,7 @@ export default class App extends Component {
           handleRegisterSubmit={this.handleRegisterSubmit}
           currentUser={this.state.currentUser}
         />
+        
       </div>
     )
   }

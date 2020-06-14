@@ -21,7 +21,6 @@ export default class Register extends Component {
     return (
       <div className="signup-container">
         <form
-          className="signup-form"
           onSubmit={(e) => {
             e.preventDefault();
             handleRegisterSubmit(this.state);
