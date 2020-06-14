@@ -3,21 +3,19 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: %i[show update destroy]
 
-  # GET /comments
+  # GET /posts/id/comments/
   def index
-    @user = User.find(params[:user_id])
-    @post = Post.find(params[:post_id])
-    @comments = Comment.where(post_id: @post.id)
+    @comments = Comment.all
 
     render json: @comments.to_json(include: { post: { include: { user: { only: %i[username admin] } } } }), status: :ok
   end
 
-  # GET /comments/1
+  # GET /posts/id/comments/id
   def show
-    render json: @comment
+    render json: @comment.to_json(include: { post: { include: { user: { only: %i[username admin] } } } }), status: :ok
   end
 
-  # POST /comments
+  # POST /posts/id/comments/
   def create
     @comment = Comment.new(comment_params)
 
@@ -28,7 +26,7 @@ class CommentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /comments/1
+  # PATCH/PUT /posts/id/comments/id
   def update
     if @comment.update(comment_params)
       render json: @comment
@@ -37,7 +35,7 @@ class CommentsController < ApplicationController
     end
   end
 
-  # DELETE /comments/1
+  # DELETE /posts/id/comments/id
   def destroy
     @comment.destroy
   end
