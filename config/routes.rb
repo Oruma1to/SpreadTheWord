@@ -7,7 +7,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/posts', to: 'posts#all'
+  get '/posts', to: 'posts#index'
+  get '/posts/:id', to: 'posts#show'
 
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'

@@ -3,16 +3,16 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show update destroy]
 
+  # # GET /posts
+  # def index
+  #   @user = User.find(params[:user_id])
+  #   @posts = Post.where(user_id: @user.id)
+
+  #   render json: @posts, include: { user: { only: %i[username admin] } }, status: :ok
+  # end
+
   # GET /posts
   def index
-    @user = User.find(params[:user_id])
-    @posts = Post.where(user_id: @user.id)
-
-    render json: @posts, include: { user: { only: %i[username admin] } }, status: :ok
-  end
-
-  # GET /posts
-  def all
     @posts = Post.all
 
     render json: @posts, include: { user: { only: %i[username admin] } }, status: :ok

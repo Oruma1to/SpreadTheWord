@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { getAllUsers, createUser, deleteUser } from '../services/users'
 import { allPostsOnly, deletePost } from '../services/posts'
 import SignIn from '../AuthComponents/SignIn'
 import SignUp from '../AuthComponents/SignUp'
 import Posts from '../LandingPage/Posts'
+import Post from '../Article/Post'
 
 export default class Main extends Component {
   state = {
@@ -48,6 +49,12 @@ export default class Main extends Component {
     this.setState({ posts })
   }
 
+  getOnePost = async (id) => {
+    const post = await getOnePostOnly(id)
+    this.setState({post})
+  }
+
+
   deletePost = async (id) => {
     await deletePost(id)
     this.setState(prevState => ({
@@ -70,13 +77,21 @@ export default class Main extends Component {
             handleRegisterSubmit={this.props.handleRegisterSubmit}
           />
         )} />
-        <Route path='/posts' render={() => (
+        <Switch>
+        <Route exact path = {`/post/:id`} render={(props) => (
+            <Post
+            {...props}
+            post={this.state.posts}
+            currentUser={this.props.currentUser}
+            deletePost={this.props.deletePost}
+          />)} />
+        </Switch>
+        <Route exact path='/' render={() => (
           <Posts
             posts={this.state.posts}
             currentUser={this.props.currentUser}
-            deletePost={this.props.deleteUser}
           />
-        )} />)}
+          )} />
       </main>
     )
   }

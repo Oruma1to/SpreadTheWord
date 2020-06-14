@@ -1,12 +1,10 @@
 import React from 'react'
+import './Posts.css'
 
 export default function Posts(props) {
   const { posts } = props
-
   return (
-    <>
-      <hr />
-      <h3>Articles</h3>
+    <>                
       {
         posts.map(post => (
           <React.Fragment key={post.id}>
@@ -16,7 +14,8 @@ export default function Posts(props) {
                   src={post.img_url}
                   alt={post.user}
                   className="post-image" />
-                <div className="post-user">{post.user.username}</div>
+                <div className="post-user"> By {post.user.username}</div>
+                <div className="post-time">Last Edited {post.updated_at}</div>
                 <div className="post-title">{post.title}</div>
                 <div className="post-content">{post.content}</div>
               </div>

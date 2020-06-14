@@ -11,7 +11,7 @@ export const allPostsOnly = async () => {
 }
 
 export const getPost = async (id) => {
-  const resp = await api.get(`/users/:id/posts/${id}`)
+  const resp = await api.get(`/posts/${id}`)
   return resp.data
 }
 
