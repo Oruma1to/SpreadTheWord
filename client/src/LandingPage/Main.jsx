@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
-import SignIn from '../AuthComponents/SignIn'
 import { getAllUsers, createUser, deleteUser } from '../services/users'
 import { allPostsOnly } from '../services/posts'
+import SignIn from '../AuthComponents/SignIn'
 import SignUp from '../AuthComponents/SignUp'
 
 export default class Main extends Component {
@@ -32,7 +32,7 @@ export default class Main extends Component {
     }))
   }
 
-  obliterateUser = async (id) => {
+  deleteUser = async (id) => {
     await deleteUser(id)
     this.setState(prevState => ({
       users: prevState.users.filter(user => user.id !== id)
@@ -46,8 +46,6 @@ export default class Main extends Component {
     const posts = await allPostsOnly()
     this.setState({ posts })
   }
-
-
 
   render() {
     return (
