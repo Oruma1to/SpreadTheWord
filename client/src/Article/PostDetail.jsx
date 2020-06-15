@@ -42,7 +42,7 @@ export default class PostDetail extends Component {
     return (
         <div>
           <div className="post-detail">
-            <img className="post-detail-image" src={post.imgURL} alt={post.title} />
+            <img className="post-detail-image" src={post.img_url} alt={post.title} />
             <div className="detail">
               <div className="title">{post.title}</div>
               <div className="content">{post.content}</div>

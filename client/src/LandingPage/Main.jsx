@@ -4,7 +4,6 @@ import { getAllUsers, createUser, deleteUser } from '../services/users'
 import SignIn from '../AuthComponents/SignIn'
 import SignUp from '../AuthComponents/SignUp'
 import Posts from '../Article/Posts'
-
 import PostDetail from '../Article/PostDetail'
 
 export default class Main extends Component {
@@ -43,37 +42,12 @@ export default class Main extends Component {
   render() {
     return (
       <main>
-        <Route path='/user/login' render={(props) => (
-          <SignIn
-            {...props}
-            handleLoginSubmit={this.props.handleLoginSubmit}
-          />
-        )} />
-        <Route path='/user/register' render={(props) => (
-          <SignUp
-            {...props}
-            handleRegisterSubmit={this.props.handleRegisterSubmit}
-          />
-        )} />
-
-        <Route exact path="/posts" render={() => <Posts />} />
-        
-        {/* <Switch>
-          <Route exact path={`/posts/:id`} render={(props) => (
-            <Post
-              {...props}
-              posts={this.state.posts}
-              currentUser={this.props.currentUser}
-              deletePost={this.props.deletePost}
-            />)} />
-        </Switch> */}
-        {/* <Route exact path='/' render={() => (
-          <Posts2
-            posts={this.state.posts}
-            currentUser={this.props.currentUser}
-          />
-        )} /> */}
-        {/* <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} />} /> */}
+        <Switch>
+          <Route path='/user/login' render={(props) => (<SignIn {...props} handleLoginSubmit={this.props.handleLoginSubmit} />)} />
+          <Route path='/user/register' render={(props) => (<SignUp {...props} handleRegisterSubmit={this.props.handleRegisterSubmit} />)} />
+          <Route exact path="/posts" render={() => <Posts />} />
+          <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} />} />
+        </Switch>
       </main>
     )
   }

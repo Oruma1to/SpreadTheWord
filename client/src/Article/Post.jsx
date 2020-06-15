@@ -1,11 +1,10 @@
 import React from "react"
 import './Posts.css'
-import {Link} from 'react-router-dom'
 
 const Post = (props) => {
   console.log(props)
   return (
-    <><Link></Link>
+    <>
       <div className="post-wrapper">
         <div className="post-container">
           <img
