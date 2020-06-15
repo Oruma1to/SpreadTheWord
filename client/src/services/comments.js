@@ -7,7 +7,7 @@ import api from './api-helper'
 
 
 export const getComment = async (id) => {
-  const resp = await api.get(`posts/:id/comments/${id}`)
+  const resp = await api.get(`/posts/:id/comments/${id}`)
   return resp.data
 }
 

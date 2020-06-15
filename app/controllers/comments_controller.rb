@@ -5,9 +5,10 @@ class CommentsController < ApplicationController
 
   # GET /posts/id/comments/
   def index
-    @comments = Comment.all
+    @post = Post.find(params[:id])
+    @comments = Comment.where(post_id: @post.id)
 
-    render json: @comments.to_json(include: { post: { include: { user: { only: %i[username admin] } } } }), status: :ok
+    render json: @comments.to_json(include: { user: { only: %i[username admin] } }), status: :ok
   end
 
   # GET /posts/id/comments/id
