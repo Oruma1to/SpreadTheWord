@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { getAllPosts } from "../services/posts"
+
 import Post from './Post'
+
 
 export default class Posts2 extends Component {
   constructor() {
     super()
     this.state = {
-      posts: []
+      posts: [],
     }
   }
   //All of my posts are now set to state here

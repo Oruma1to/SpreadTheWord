@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getComment } from "../services/comments"
+import { getAllComments } from "../services/comments"
 import Comment from '../Article/Comment'
 
 export default class Comments extends Component {
@@ -9,13 +9,11 @@ export default class Comments extends Component {
       comments: []
     }
   }
-  //Specific comments are now set to state here
-  async componentDidMount() {
-    let { post_id } = this.props.match.params
-    const comment = await getComment(post_id)
-    this.setState({ comment })
-  }
-
+  //All of my comments are now set to state here
+    async componentDidMount() {
+      const comments = await getAllComments();
+      this.setState({ comments });
+    }
 
   render() {
     const comments = this.state.comments

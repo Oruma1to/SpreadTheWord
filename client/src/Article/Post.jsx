@@ -1,5 +1,7 @@
 import React from "react"
 import './Posts.css'
+import { Route } from 'react-router-dom'
+import Comments from './Comments'
 
 const Post = (props) => {
   console.log(props)
@@ -16,6 +18,7 @@ const Post = (props) => {
           <div className="post-title">{props.title}</div>
           <div className="post-content">{props.content}</div>
         </div>
+        <Route exact path="/posts/:id" render={() => <Comments />} />
       </div>
     </>
   )

@@ -5,7 +5,6 @@ import SignIn from '../AuthComponents/SignIn'
 import SignUp from '../AuthComponents/SignUp'
 import Posts from '../Article/Posts'
 import PostDetail from '../Article/PostDetail'
-import Comments from '../Article/Comments'
 
 export default class Main extends Component {
   state = {
@@ -48,7 +47,6 @@ export default class Main extends Component {
           <Route path='/user/register' render={(props) => (<SignUp {...props} handleRegisterSubmit={this.props.handleRegisterSubmit} />)} />
           <Route exact path="/posts" render={() => <Posts />} />
           <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} />} />
-          <Route exact path="/posts/:id" render={() => <Comments />} />
         </Switch>
       </main>
     )
