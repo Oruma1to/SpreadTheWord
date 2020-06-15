@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { getAllUsers, createUser, deleteUser } from '../services/users'
-import { allPostsOnly, deletePost } from '../services/posts'
 import SignIn from '../AuthComponents/SignIn'
 import SignUp from '../AuthComponents/SignUp'
-import Posts from '../LandingPage/Posts'
-import Post from '../Article/Post'
+import Posts from '../Article/Posts'
+
+import PostDetail from '../Article/PostDetail'
 
 export default class Main extends Component {
   state = {
@@ -16,7 +16,6 @@ export default class Main extends Component {
 
   componentDidMount() {
     this.getUsers()
-    this.getPosts()
   }
 
   // ============================
@@ -41,27 +40,6 @@ export default class Main extends Component {
     }))
   }
 
-  // ============================
-  // ========== Posts ===========
-  // ============================
-  getPosts = async () => {
-    const posts = await allPostsOnly()
-    this.setState({ posts })
-  }
-
-  getOnePost = async (id) => {
-    const post = await getOnePostOnly(id)
-    this.setState({post})
-  }
-
-
-  deletePost = async (id) => {
-    await deletePost(id)
-    this.setState(prevState => ({
-      posts: prevState.posts.filter(post => post.id !== id)
-    }))
-  }
-
   render() {
     return (
       <main>
@@ -77,21 +55,25 @@ export default class Main extends Component {
             handleRegisterSubmit={this.props.handleRegisterSubmit}
           />
         )} />
-        <Switch>
-        <Route exact path = {`/post/:id`} render={(props) => (
+
+        <Route exact path="/posts" render={() => <Posts />} />
+        
+        {/* <Switch>
+          <Route exact path={`/posts/:id`} render={(props) => (
             <Post
-            {...props}
-            post={this.state.posts}
-            currentUser={this.props.currentUser}
-            deletePost={this.props.deletePost}
-          />)} />
-        </Switch>
-        <Route exact path='/' render={() => (
-          <Posts
+              {...props}
+              posts={this.state.posts}
+              currentUser={this.props.currentUser}
+              deletePost={this.props.deletePost}
+            />)} />
+        </Switch> */}
+        {/* <Route exact path='/' render={() => (
+          <Posts2
             posts={this.state.posts}
             currentUser={this.props.currentUser}
           />
-          )} />
+        )} /> */}
+        {/* <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} />} /> */}
       </main>
     )
   }
