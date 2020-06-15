@@ -1,22 +1,7 @@
-.main-title {
-  font-size: 60px;
-  text-align: center;
-}
-
-.post-container {
-  width: 800px;
+.flexbox {
   display: flex;
-  flex-direction: column;
-  margin: 80px auto;
+  flex-wrap: wrap;
+  margin: 200px auto 0 auto;
+  max-width: 80%;
+  justify-content: center;
 }
-
-.post-title {
-  text-align: center;
-  font-weight: bolder;
-  font-size: 30px;
-}
-
-.post-content {
-  text-align: justify;
-}
-

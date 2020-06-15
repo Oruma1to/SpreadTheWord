@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { getPost, deletePost } from '../services/posts'
 import { Redirect, Link } from 'react-router-dom'
 import { getAllComments } from "../services/comments"
-import Comment from './Comment'
+import Comments from './Comments'
 
 export default class PostDetail extends Component {
   constructor(props) {
@@ -55,7 +55,7 @@ export default class PostDetail extends Component {
     console.log(this.props)
 
     const COMMENTS = comments.map((comment, index) =>
-      <Comment id={comment.id} pid={comment.post_id} key={index} content={comment.content} user={comment.user} />
+      <Comments id={comment.id} pid={comment.post_id} key={index} content={comment.content} user={comment.user} />
     )
 
     const { post, deleted } = this.state

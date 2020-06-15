@@ -23,7 +23,7 @@ export default class Posts2 extends Component {
       <Post id={post.id} title={post.title} user={post.user.username} img_url={post.img_url} key={index} content={post.content} />
     )
     return (
-      <div>
+      <div className="flexbox">
         {POSTS}
       </div>
     )

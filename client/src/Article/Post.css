@@ -1,0 +1,23 @@
+.post-wrapper  {
+  width: 450px;
+  height: 350px;
+  margin: 20px;
+  border: 2px solid lightgrey;
+  box-shadow: 0 0 17px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.post-image {
+  width: 450px;
+  height: 300px
+}
+
+.post-title {
+  font-size: 17px;
+  font-weight: bold;
+  align-self: center;
+  margin-top: 10px
+}

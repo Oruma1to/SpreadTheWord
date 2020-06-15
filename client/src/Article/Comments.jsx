@@ -1,29 +1,19 @@
-import React, { Component } from 'react'
-import { getAllComments } from "../services/comments"
-import Comment from '../Article/Comment'
+import React from "react"
+import './Posts.css'
 
-export default class Comments extends Component {
-  constructor() {
-    super()
-    this.state = {
-      comments: []
-    }
-  }
-  //All of my comments are now set to state here
-    async componentDidMount() {
-      const comments = await getAllComments();
-      this.setState({ comments });
-    }
-
-  render() {
-    const comments = this.state.comments
-    const COMMENTS = comments.map((comment, index) =>
-      <Comment id={comment.id} pid={comment.post_id} key={index} content={comment.content} />
-    )
-    return (
-      <div>
-        {COMMENTS}
+const Comments = (props) => {
+  console.log(props)
+  return (
+    <>
+      <div className="comment-wrapper">
+        <div className="comment-container">
+          <div className="comment-user"> By {props.user.username}</div>
+          <div className="comment-time">Posted at {props.updated_at}</div>
+          <div className="comment-content">{props.content}</div>
+        </div>
       </div>
-    )
-  }
+    </>
+  )
 }
+
+export default Comments

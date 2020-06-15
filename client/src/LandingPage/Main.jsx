@@ -45,7 +45,7 @@ export default class Main extends Component {
         <Switch>
           <Route path='/user/login' render={(props) => (<SignIn {...props} handleLoginSubmit={this.props.handleLoginSubmit} />)} />
           <Route path='/user/register' render={(props) => (<SignUp {...props} handleRegisterSubmit={this.props.handleRegisterSubmit} />)} />
-          <Route exact path="/posts" render={() => <Posts />} />
+          <Route exact path="/" render={() => <Posts />} />
           <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} />} />
         </Switch>
       </main>
