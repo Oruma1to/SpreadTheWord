@@ -1,7 +1,31 @@
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto 0 auto;
+  max-width: 60%;
+}
+
+.main-intro-image {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  margin: 0 auto
+}
+
+.main-content {
+  text-align: center;
+}
+
+.latest-posts {
+  text-align:center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
 .flexbox {
   display: flex;
   flex-wrap: wrap;
-  margin: 200px auto 0 auto;
+  margin: 0 auto 0 auto;
   max-width: 80%;
   justify-content: center;
 }
