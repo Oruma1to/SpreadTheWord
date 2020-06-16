@@ -38,7 +38,7 @@
                      })
 @post = Post.create!({
                        user_id: '5',
-                       title: 'How Goofs and Gaffs lead to millions of Laughs',
+                       title: 'Will there ever be another PewDiePie?',
                        img_url: 'https://pmcvariety.files.wordpress.com/2019/12/pewdiepie.png',
                        content: "I'm baby meggings ramps kitsch, irony activated charcoal fashion axe slow-carb pour-over VHS yr bespoke literally sartorial cold-pressed. Meditation typewriter squid small batch hashtag. You probably haven't heard of them cardigan activated charcoal pop-up art party palo santo blue bottle selfies stumptown pok pok dreamcatcher cred XOXO. Tacos freegan marfa banh mi disrupt.
 
@@ -89,7 +89,7 @@
 @post = Post.create!({
                        user_id: '9',
                        title: 'How to thrive as a comedian on youtube',
-                       img_url: 'https://i0.wp.com/www.saatva.com/blog/wp-content/uploads/2020/05/tom-segura-interview.jpg?fit=1395%2C495&ssl=1',
+                       img_url: 'https://weartesters.com/wp-content/uploads/2018/07/tom-segura-nike-adidas-beef-hot-ones.jpg',
                        content: "I'm baby skateboard snackwave bushwick mixtape, bitters enamel pin DIY tumeric. Hexagon DIY try-hard hashtag +1 fashion axe master cleanse offal green juice drinking vinegar authentic leggings stumptown. Swag cred salvia edison bulb retro semiotics DIY messenger bag chambray umami tousled asymmetrical live-edge XOXO hot chicken. Listicle 8-bit tote bag PBR&B, +1 salvia disrupt kombucha. Lyft letterpress pork belly health goth meditation occupy celiac. Pabst pork belly seitan gentrify pitchfork blog. Tousled distillery master cleanse woke 3 wolf moon vice godard succulents drinking vinegar vape.
 
                        Williamsburg viral taxidermy shabby chic selvage beard neutra portland. Pok pok brooklyn enamel pin blue bottle deep v intelligentsia YOLO. Deep v YOLO narwhal everyday carry next level pork belly unicorn butcher. Keytar activated charcoal venmo semiotics aesthetic. Mustache mixtape 8-bit, farm-to-table gluten-free chartreuse PBR&B yr occupy food truck paleo seitan sriracha echo park. Post-ironic drinking vinegar hella kinfolk tousled. Small batch kogi mlkshk lumbersexual ugh hexagon."
@@ -97,7 +97,7 @@
 @post = Post.create!({
                        user_id: '11',
                        title: "Just keep at it, trust us it's totally worth it!",
-                       img_url: "https://images-na.ssl-images-amazon.com/images/I/81PSfZQ8y-L._RI_.jpg",
+                       img_url: 'https://images-na.ssl-images-amazon.com/images/I/81PSfZQ8y-L._RI_.jpg',
                        content: "I'm baby pour-over cardigan knausgaard shaman, hexagon disrupt portland la croix 3 wolf moon freegan hammock kombucha waistcoat. Hella humblebrag vice polaroid, synth squid chambray mustache single-origin coffee migas chartreuse food truck. 90's gluten-free celiac before they sold out synth, poke pickled banjo lyft cred bespoke whatever 8-bit locavore pour-over. Salvia gochujang portland, tattooed skateboard literally gastropub kombucha. Woke before they sold out live-edge skateboard, asymmetrical chicharrones kitsch pitchfork af cliche cred sriracha chillwave tousled. Crucifix franzen pour-over, jianbing hot chicken normcore locavore trust fund semiotics venmo migas williamsburg. Drinking vinegar seitan fashion axe readymade la croix.
 
                        Whatever paleo mixtape austin stumptown truffaut shabby chic jean shorts narwhal thundercats humblebrag you probably haven't heard of them. DIY retro next level, tacos coloring book normcore bespoke celiac copper mug lomo selfies. Literally bicycle rights drinking vinegar, typewriter tousled crucifix ennui. Succulents bespoke authentic, pork belly umami street art gochujang blog taxidermy."
