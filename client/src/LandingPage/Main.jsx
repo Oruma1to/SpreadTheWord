@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { getAllUsers, createUser, deleteUser } from '../services/users'
+import { createPost } from '../services/posts'
+import PostCreate from '../Article/PostCreate'
 import SignIn from '../AuthComponents/SignIn'
 import SignUp from '../AuthComponents/SignUp'
 import Posts from '../Article/Posts'
 import PostDetail from '../Article/PostDetail'
-
 export default class Main extends Component {
   state = {
     users: [],
@@ -17,6 +18,13 @@ export default class Main extends Component {
     this.getUsers()
   }
 
+  createPost = async (postData) => {
+    const newPost = await createPost(postData)
+    this.setState(prevState => ({
+      posts: [...prevState.posts, newPost]
+    }))
+  }
+
   // ============================
   // ========== Users ===========
   // ============================
@@ -24,6 +32,7 @@ export default class Main extends Component {
     const users = await getAllUsers()
     this.setState({ users })
   }
+  
 
   postUser = async (userData) => {
     const newUser = await createUser(userData)
@@ -39,6 +48,7 @@ export default class Main extends Component {
     }))
   }
 
+
   render() {
     return (
       <main>
@@ -47,6 +57,7 @@ export default class Main extends Component {
           <Route path='/user/register' render={(props) => (<SignUp {...props} handleRegisterSubmit={this.props.handleRegisterSubmit} />)} />
           <Route exact path="/" render={() => <Posts />} />
           <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} />} />
+          <Route path='/new/post' render={(props) => (<PostCreate {...props} createPost={createPost}/> )} />
         </Switch>
       </main>
     )

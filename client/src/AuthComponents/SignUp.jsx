@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './SignUp.css'
+import {Link} from 'react-router-dom'
 
 export default class Register extends Component {
   state = {
@@ -80,7 +81,7 @@ export default class Register extends Component {
             <button className="signup-btn">Sign Up</button>
           </div>
         </form>
-
+        <div className="loginPrompt">Already have an account?<Link to="/user/login" className="signIn-link">Sign In!</Link></div>
       </div>
     )
   }

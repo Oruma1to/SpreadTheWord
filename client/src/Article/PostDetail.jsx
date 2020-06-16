@@ -34,6 +34,13 @@ export default class PostDetail extends Component {
     this.setState({ post })
   }
 
+  createPost = async (postData) => {
+    const newPost = await this.createPost(postData)
+    this.setState(prevState => ({
+      posts: [...prevState.posts, newPost]
+    }))
+  }
+
   getComments = async () => {
     let { id } = this.props.match.params
     const comments = await getAllComments(id);
@@ -64,7 +71,7 @@ export default class PostDetail extends Component {
 
     const { post, deleted } = this.state
     if (deleted) {
-      return <Redirect to={'/posts'} />
+      return <Redirect to={'/'} />
     }
     return (
       <div className="postDetail-container">

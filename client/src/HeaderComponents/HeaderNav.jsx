@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './HeaderNav.css'
 
 export default function HeaderNav(props) {
-  console.log(props.currentUser)
+
   return (
     <div className="headerNavContainer">
       <Link to="/" className="headerNavLink">Home</Link>
@@ -13,7 +13,7 @@ export default function HeaderNav(props) {
       <Link to="" className="headerNavLink">Twitch Creators</Link>
       {props.currentUser
           ?
-          <><p className="headerNavUser">{props.currentUser.username}</p><Link className="headerNavLink" onClick={props.handleLogout}>Logout</Link></>
+          <><p className="headerNavUser">{props.currentUser.username}</p><Link to=""className="headerNavLink" onClick={props.handleLogout}>Logout</Link></>
           :
           <Link className="headerNavLink" to='/user/login'>Login/Register</Link>
       }

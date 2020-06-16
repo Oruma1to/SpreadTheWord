@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getAllPosts } from "../services/posts"
+import { getAllPosts, createPost } from "../services/posts"
 import './Posts.css'
 import Post from './Post'
 
@@ -8,9 +8,10 @@ export default class Posts extends Component {
   constructor() {
     super()
     this.state = {
-      posts: [],
+      posts: []
     }
   }
+  
   //All of my posts are now set to state here
   async componentDidMount() {
     const posts = await getAllPosts();

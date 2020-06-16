@@ -33,10 +33,18 @@
 
 .signup-btn {
   background-color: #80F5D2;
-  color: #468189;
+  color: black;
   height: 28px;
   width: 100px;
   border-radius: 10px;
   font-weight: 600;
-  margin: 40px auto 0 auto;
+  margin: 30px auto 20px auto;
+}
+
+.loginPrompt * {
+  margin: 10px
+}
+
+.signIn-link {
+  text-decoration: none;
 }

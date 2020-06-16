@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import './SignIn.css'
+import {Link} from 'react-router-dom'
 
 export default class Login extends Component {
   constructor(props) {
@@ -64,6 +64,7 @@ export default class Login extends Component {
           </div>
           <br />
           <button className="signin-btn">Sign In</button>
+          <div className="regPrompt">Don't Have an account?<Link to="/user/register" className="signUp-link">Sign Up!</Link></div>
         </form>
       </div>
     )

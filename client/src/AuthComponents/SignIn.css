@@ -16,6 +16,7 @@
 
 .input-lbl {
   text-align: center;
+  height:30px;
   width: 200px;
   border: 2px solid grey;
 }
@@ -26,16 +27,22 @@
 
 .form-title {
   text-align: center;
-  padding: 0;
-  margin: -20px 0 40px 0
 }
 
 .signin-btn {
   background-color: #80F5D2;
-  color: #468189;
+  color: black;
   height: 28px;
   width: 100px;
   border-radius: 10px;
   font-weight: 600;
-  margin: 40px auto 0 auto;
+  margin: 20px auto 30px auto;
+}
+
+.regPrompt * {
+  margin: 10px
+}
+
+.signUp-link {
+  text-decoration: none;
 }
