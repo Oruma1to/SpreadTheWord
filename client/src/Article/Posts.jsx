@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { getAllPosts } from "../services/posts"
-
+import './Posts.css'
 import Post from './Post'
 
 
