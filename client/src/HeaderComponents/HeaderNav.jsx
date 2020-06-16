@@ -11,8 +11,7 @@ export default function HeaderNav(props) {
       <Link to="" className="headerNavLink">Beginners Guide</Link>
       <Link to="" className="headerNavLink">Youtube Creators</Link>
       <Link to="" className="headerNavLink">Twitch Creators</Link>
-      {
-        props.currentUser
+      {props.currentUser
           ?
           <><p className="headerNavUser">{props.currentUser.username}</p><Link className="headerNavLink" onClick={props.handleLogout}>Logout</Link></>
           :
