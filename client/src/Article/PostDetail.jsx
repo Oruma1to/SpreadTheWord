@@ -3,6 +3,7 @@ import { getPost, deletePost } from '../services/posts'
 import { Redirect, Link } from 'react-router-dom'
 import { getAllComments } from "../services/comments"
 import Comments from './Comments'
+import './PostDetail.css'
 
 export default class PostDetail extends Component {
   constructor(props) {
@@ -63,19 +64,17 @@ export default class PostDetail extends Component {
       return <Redirect to={'/posts'} />
     }
     return (
-      <div>
-        <div className="post-detail">
-          <img className="post-detail-image" src={post.img_url} alt={post.title} />
-          <div className="detail">
-            <div className="title">{post.title}</div>
-            <div className="content">{post.content}</div>
+      <div className="postDetail-container">
+          <div className="postDetail-wrapper">
+            <div className="postDetail-title">{post.title}</div>
+            <img className="postDetail-image" src={post.img_url} alt={post.title} />
+            <div className="postDetail-content">{post.content}</div>
             <div className="button-container">
               <button className="edit-button"><Link className="edit-link" to={`/posts/${post._id}/edit`}>Edit</Link></button>
               <button className="delete-button" onClick={this.deletedThisPost}>Delete</button>
             </div>
-          </div>
         </div>
-        <div>{COMMENTS}</div>
+        <div className="postDetail-comments">{COMMENTS}</div>
       </div>
     )
   }

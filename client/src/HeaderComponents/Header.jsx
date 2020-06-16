@@ -3,6 +3,7 @@ import './Header.css'
 import HeaderNav from './HeaderNav'
 
 export default function Header() {
+  
   return (
       <div className="header-wrapper">
         <div className="site-title">SPREAD THE WORD</div>
