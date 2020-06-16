@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './HeaderNav.css'
 
-export default function HeaderNav() {
+export default function HeaderNav(props) {
+  console.log(props.currentUser)
   return (
     <div className="headerNavContainer">
       <Link to="/" className="headerNavLink">Home</Link>
@@ -10,8 +11,14 @@ export default function HeaderNav() {
       <Link to="" className="headerNavLink">Beginners Guide</Link>
       <Link to="" className="headerNavLink">Youtube Creators</Link>
       <Link to="" className="headerNavLink">Twitch Creators</Link>
-      <Link to="/user/login" className="headerNavLink">Sign In</Link>
-      <Link to="/user/register" className="headerNavLink">Sign Up For an Account</Link>
+      {
+        props.currentUser
+          ?
+          <><p className="headerNavUser">{props.currentUser.username}</p><Link className="headerNavLink" onClick={props.handleLogout}>Logout</Link></>
+          :
+          <Link className="headerNavLink" to='/user/login'>Login/Register</Link>
+      }
+
     </div>
   )
 }

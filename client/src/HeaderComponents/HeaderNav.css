@@ -10,5 +10,13 @@
   font-weight: bold;
   margin: 10px;
   font-size: 17px;
-  
+}
+
+
+.headerNavUser {
+  text-decoration: none;
+  color: #EFCB68;
+  font-weight: bold;
+  margin: 10px;
+  font-size: 17px;
 }
