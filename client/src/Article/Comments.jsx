@@ -1,8 +1,9 @@
 import React from "react"
-import './Posts.css'
+import './Comments.css'
 
 const Comments = (props) => {
   console.log(props)
+  
   return (
     <>
       <div className="comment-wrapper">

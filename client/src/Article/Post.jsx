@@ -14,10 +14,8 @@ const Post = (props) => {
           alt={props.user}
           className="post-image" />
         </div>
-        {/* <div className="post-user"> By {props.user.username}</div>
-          <div className="post-time">Last Edited {props.updated_at}</div> */}
-        <div className="post-title">{props.title}</div>
-        {/* <div className="post-content">{props.content}</div> */}
+        <div className="post-title">{props.title} <br/>By {props.user}</div>
+        <div className="post-user"> </div>
       </div>
     </Link>
   )

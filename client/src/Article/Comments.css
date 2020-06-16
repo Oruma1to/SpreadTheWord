@@ -1,0 +1,10 @@
+.comment-container {
+  border: 2px solid black;
+  margin: 20px 0;
+  padding: 10px 20px 10px 20px
+}
+
+.comment-container * {
+  margin: 5px 0;
+  word-spacing: 2px;
+}

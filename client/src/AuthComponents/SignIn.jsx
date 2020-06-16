@@ -63,7 +63,7 @@ export default class Login extends Component {
             </label>
           </div>
           <br />
-          <button className="signup-btn">Sign In</button>
+          <button className="signin-btn">Sign In</button>
         </form>
       </div>
     )

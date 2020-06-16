@@ -12,7 +12,10 @@ export default class PostDetail extends Component {
       post: {
         title: '',
         img_url: '',
-        content: ''
+        content: '',
+        user: {
+          username: ''
+        }
       },
       comments: []
       ,
@@ -56,7 +59,7 @@ export default class PostDetail extends Component {
     console.log(this.props)
 
     const COMMENTS = comments.map((comment, index) =>
-      <Comments id={comment.id} pid={comment.post_id} key={index} content={comment.content} user={comment.user} />
+      <Comments id={comment.id} pid={comment.post_id} key={index} content={comment.content} user={comment.user} updated_at={comment.updated_at} />
     )
 
     const { post, deleted } = this.state
@@ -66,7 +69,8 @@ export default class PostDetail extends Component {
     return (
       <div className="postDetail-container">
           <div className="postDetail-wrapper">
-            <div className="postDetail-title">{post.title}</div>
+          <div className="postDetail-title">{post.title}</div>
+          <div className="postDetail-author">By {post.user.username}</div>
             <img className="postDetail-image" src={post.img_url} alt={post.title} />
             <div className="postDetail-content">{post.content}</div>
             <div className="button-container">
@@ -74,6 +78,7 @@ export default class PostDetail extends Component {
               <button className="delete-button" onClick={this.deletedThisPost}>Delete</button>
             </div>
         </div>
+        <div className="postDetail-commentSection">COMMENTS</div>
         <div className="postDetail-comments">{COMMENTS}</div>
       </div>
     )

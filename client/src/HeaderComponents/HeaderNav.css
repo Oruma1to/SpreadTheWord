@@ -1,12 +1,14 @@
 .headerNavContainer {
   display: flex;
   justify-content: space-evenly;
+  background-color: #468189
 }
 
 .headerNavLink {
   text-decoration: none;
-  color: black;
+  color: #80F5D2;
   font-weight: bold;
   margin: 10px;
   font-size: 17px;
+  
 }

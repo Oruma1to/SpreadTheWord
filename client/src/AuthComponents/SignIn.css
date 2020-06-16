@@ -10,7 +10,8 @@
   box-shadow: 0 0 17px 2px rgba(0, 0, 0, 0.5);
   font-weight: bold;
   width: 300px;
-  height: 300px
+  height: 300px;
+  background-color: #B2B1CF;
 }
 
 .input-lbl {
@@ -30,11 +31,11 @@
 }
 
 .signin-btn {
-  background-color: #84b59f;
-  color: white;
+  background-color: #80F5D2;
+  color: #468189;
   height: 28px;
-  width: 110px;
-  border-radius: 20px;
+  width: 100px;
+  border-radius: 10px;
   font-weight: 600;
   margin: 40px auto 0 auto;
 }
