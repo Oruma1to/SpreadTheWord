@@ -1,17 +1,14 @@
 import React from 'react'
 import './Header.css'
 import HeaderNav from './HeaderNav'
-// import Logo from './Logo'
 
 export default function Header() {
   return (
-    <div className="header-container">
-      {/* <div className="h-logo-container">
-        <Logo />
-      </div> */}
-      <div className="h-nav-container">
-        <HeaderNav />
+      <div className="header-wrapper">
+        <div className="site-title">SPREAD THE WORD</div>
+        <div className="header-nav">
+          <HeaderNav />
+        </div>
       </div>
-    </div>
   )
 }

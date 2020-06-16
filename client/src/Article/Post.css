@@ -21,3 +21,8 @@
   align-self: center;
   margin-top: 10px
 }
+
+.post-link {
+  text-decoration: none;
+  color: black
+}

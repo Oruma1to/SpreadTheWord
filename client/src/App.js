@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from './HeaderComponents/Header'
 import Main from './LandingPage/Main'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth'
+import './App.css'
 
 export default class App extends Component {
   state = {

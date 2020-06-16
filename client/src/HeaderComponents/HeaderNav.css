@@ -1,12 +1,12 @@
 .headerNavContainer {
-  font-family: "ProximaNovaCond",sans-serif;
   display: flex;
+  justify-content: space-evenly;
 }
 
 .headerNavLink {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  padding: 10px;
+  margin: 10px;
   font-size: 17px;
 }

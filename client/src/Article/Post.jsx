@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 const Post = (props) => {
   console.log(props)
   return (
-    <Link to={`/posts/${props.id}`}>
+    <Link className="post-link" to={`/posts/${props.id}`}>
       <div className="post-wrapper">
 
         <div><img

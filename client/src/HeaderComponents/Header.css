@@ -1,10 +1,17 @@
-.header-container {
+.header-wrapper {
   height: 200px;
   border-bottom: 2px solid black;
-  display:flex
+  display:flex;
+  flex-direction: column;
+  text-align: center;
 }
+/* 
+.header-wrapper {
+  margin: 0 auto
+} */
 
-.h-nav-container {
-  align-self: flex-end;
-  margin-bottom: 10px;
+.site-title {
+  text-align:center;
+  font-size: 60px;
+  margin: 50px 0 40px 0;
 }
