@@ -9,13 +9,15 @@ Rails.application.routes.draw do
 
   get '/posts', to: 'posts#index'
   get '/posts/:id', to: 'posts#show'
-
   post '/posts', to: 'posts#create'
   put '/posts/:id', to: 'posts#update'
   delete '/posts/:id', to: 'posts#destroy'
 
   get '/posts/:id/comments', to: 'comments#index'
   get '/posts/:id/comments/:id', to: 'comments#show'
+  get '/posts/:id/comments', to: 'comments#create'
+  get '/posts/:id/comments/:id', to: 'comments#update'
+  get '/posts/:id/comments/:id', to: 'comments#destroy'
 
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'

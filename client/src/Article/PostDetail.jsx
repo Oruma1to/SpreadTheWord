@@ -50,7 +50,7 @@ export default class PostDetail extends Component {
   deletedThisPost = async () => {
     console.log("deleting blog")
     const { post } = this.state
-    if (this.props.currentUser | this.props.currentUser.admin === true) {
+    if (this.props.currentUser || this.props.currentUser.admin === true) {
       await deletePost(post.id)
       this.setState({
         deleted: true
@@ -84,7 +84,6 @@ export default class PostDetail extends Component {
             <img className="postDetail-image" src={post.img_url} alt={post.title} />
             <div className="postDetail-content">{post.content}</div>
           <div className="button-container">
-
             {
               this.props.currentUser && this.props.currentUser.id === post.user_id | this.props.currentUser.admin === true &&
               (<>

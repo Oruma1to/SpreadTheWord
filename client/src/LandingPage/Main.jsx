@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch, Redirect } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { getAllUsers, createUser, deleteUser } from '../services/users'
 import { createPost } from '../services/posts'
 import PostCreate from '../Article/PostCreate'
@@ -52,8 +52,6 @@ export default class Main extends Component {
   
 
   render() {
-    const { user } = this.state
-    console.log(this.props.currentUser)
     return (
       <main>
         <Switch>

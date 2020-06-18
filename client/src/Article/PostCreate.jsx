@@ -18,13 +18,17 @@ export default class PostCreate extends Component {
   render() {
     const { title, img_url, content } = this.state;
     const { createPost, history } = this.props;
+
+
+
+    
     return (
       <div className="create-container">
         <form
           onSubmit={(e) => {
             e.preventDefault();
             createPost(this.state);
-            history.push('/posts');
+            history.push('/');
             this.setState({
               title: "",
               img_url: "",

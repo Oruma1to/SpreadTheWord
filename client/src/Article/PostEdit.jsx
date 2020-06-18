@@ -32,18 +32,9 @@ class PostEdit extends Component {
     })
   }
 
-  // handleSubmit = async (e) => {
-  //   e.preventDefault()
-  //   let { id } = this.props.match.params
-  //   const updated = await updatePost(id, this.state.post)
-  //   this.setState({ updated })
-  // }
-
-
   render() {
     const { post, updated } = this.state
     const { history } = this.props
-    console.log(this.props.currentUser)
 
     if (updated) {
       return <Redirect to={`/posts/${this.props.match.params.id}`} />
