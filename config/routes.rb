@@ -9,8 +9,9 @@ Rails.application.routes.draw do
 
   get '/posts', to: 'posts#index'
   get '/posts/:id', to: 'posts#show'
-  
+
   post '/posts', to: 'posts#create'
+  put '/posts/:id', to: 'posts#update'
 
   get '/posts/:id/comments', to: 'comments#index'
   get '/posts/:id/comments/:id', to: 'comments#show'

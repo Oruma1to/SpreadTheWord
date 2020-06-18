@@ -42,6 +42,7 @@ class PostEdit extends Component {
 
   render() {
     const { post, updated } = this.state
+    const {history} = this.props
 
     if (updated) {
       return <Redirect to={`/posts/${this.props.match.params.id}`} />
@@ -50,13 +51,12 @@ class PostEdit extends Component {
       <div className="product-edit">
         <img className="edit-product-image" src={post.img_url} alt={post.title} />
         <form
-          onSubmit={async (e) => {
+          onSubmit={(e) => {
             e.preventDefault()
             let { id } = this.props.match.params
-            const updated = await updatePost(id, this.state.post)
-            this.setState({
-              updated
-            })
+            const updated = updatePost(id, this.state.post)
+            history.push(`/posts/${post.id}`)
+            this.setState({ updated })
           }}>
           <label htmlFor="img_url">
             <input
