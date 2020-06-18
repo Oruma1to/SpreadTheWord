@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import { getAllUsers, createUser, deleteUser } from '../services/users'
 import { createPost } from '../services/posts'
 import PostCreate from '../Article/PostCreate'
@@ -7,6 +7,7 @@ import SignIn from '../AuthComponents/SignIn'
 import SignUp from '../AuthComponents/SignUp'
 import Posts from '../Article/Posts'
 import PostDetail from '../Article/PostDetail'
+import PostEdit from '../Article/PostEdit'
 export default class Main extends Component {
   state = {
     users: [],
@@ -48,8 +49,10 @@ export default class Main extends Component {
     }))
   }
 
+  
 
   render() {
+    const { user } = this.state
     return (
       <main>
         <Switch>
@@ -57,7 +60,8 @@ export default class Main extends Component {
           <Route path='/user/register' render={(props) => (<SignUp {...props} handleRegisterSubmit={this.props.handleRegisterSubmit} />)} />
           <Route exact path="/" render={() => <Posts />} />
           <Route exact path="/posts/:id" render={(props) => (<PostDetail {...props} history={props.history} />)} />
-          <Route path='/new/post' render={(props) => (<PostCreate {...props} createPost={createPost}/> )} />
+          <Route path='/new/post' render={(props) => (<PostCreate {...props} createPost={createPost} />)} />
+          <Route exact path="/posts/:id/edit" render={(props) => <PostEdit {...props} user={user} /> } />
         </Switch>
       </main>
     )
