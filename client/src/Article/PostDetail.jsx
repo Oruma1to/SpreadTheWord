@@ -50,7 +50,7 @@ export default class PostDetail extends Component {
   deletedThisPost = async () => {
     console.log("deleting blog")
     const { post } = this.state
-    if (this.props.user) {
+    if (this.props.currentUser) {
       await deletePost(post.id)
       this.setState({
         deleted: true
@@ -86,8 +86,7 @@ export default class PostDetail extends Component {
           <div className="button-container">
 
             {
-              this.props.currentUser && this.props.currentUser.id === post.user_id &&
-          
+              this.props.currentUser && this.props.currentUser.id === post.user_id | this.props.currentUser.admin === true &&
               (<>
                 <button className="edit-button"><Link className="edit-link" to={`/posts/${post.id}/edit`}>Edit</Link></button>
                 <button className="delete-button" onClick={this.deletedThisPost}>Delete</button>
