@@ -3,7 +3,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show update destroy]
   before_action :authorize_request, only: %i[create update destroy]
-
+  before_action :clear, only: [:destroy]
   # GET /posts
   def index
     @posts = Post.all
@@ -52,5 +52,9 @@ class PostsController < ApplicationController
   # Only allow a trusted parameter "white list" through.
   def post_params
     params.require(:post).permit(:title, :img_url, :content)
+  end
+
+  def clear
+    Comment.where(post_id: @post.id).destroy_all
   end
 end

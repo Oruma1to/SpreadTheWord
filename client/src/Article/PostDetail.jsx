@@ -50,7 +50,7 @@ export default class PostDetail extends Component {
   deletedThisPost = async () => {
     console.log("deleting blog")
     const { post } = this.state
-    if (this.props.currentUser) {
+    if (this.props.currentUser | this.props.currentUser.admin === true) {
       await deletePost(post.id)
       this.setState({
         deleted: true
