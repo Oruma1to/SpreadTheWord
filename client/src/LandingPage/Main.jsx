@@ -53,15 +53,16 @@ export default class Main extends Component {
 
   render() {
     const { user } = this.state
+    console.log(this.props.currentUser)
     return (
       <main>
         <Switch>
           <Route path='/user/login' render={(props) => (<SignIn {...props} handleLoginSubmit={this.props.handleLoginSubmit} />)} />
           <Route path='/user/register' render={(props) => (<SignUp {...props} handleRegisterSubmit={this.props.handleRegisterSubmit} />)} />
           <Route exact path="/" render={() => <Posts />} />
-          <Route exact path="/posts/:id" render={(props) => (<PostDetail {...props} history={props.history} />)} />
+          <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} currentUser={this.props.currentUser}/>} />
           <Route path='/new/post' render={(props) => (<PostCreate {...props} createPost={createPost} />)} />
-          <Route exact path="/posts/:id/edit" render={(props) => <PostEdit {...props} user={user} /> } />
+          <Route exact path="/posts/:id/edit" render={(props) => <PostEdit {...props} currentUser={this.props.currentUser} history={props.history}/> } />
         </Switch>
       </main>
     )

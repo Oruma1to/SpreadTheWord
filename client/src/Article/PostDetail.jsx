@@ -62,7 +62,7 @@ export default class PostDetail extends Component {
 
   render() {
     const comments = this.state.comments
-    console.log(comments)
+    console.log()
 
     const COMMENTS = comments.map((comment, index) =>
       <Comments id={comment.id} pid={comment.post_id} key={index} content={comment.content} user={comment.user} updated_at={comment.updated_at} />

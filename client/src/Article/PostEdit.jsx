@@ -42,7 +42,8 @@ class PostEdit extends Component {
 
   render() {
     const { post, updated } = this.state
-    const {history} = this.props
+    const { history } = this.props
+    console.log(this.props.currentUser)
 
     if (updated) {
       return <Redirect to={`/posts/${this.props.match.params.id}`} />
