@@ -2,7 +2,7 @@
 
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show update destroy]
-  before_action :authorize_request, except: :create
+  # before_action :authorize_request, except: :create
 
   # GET /users
   def index
@@ -22,8 +22,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      @token = encode({ user_id: @user.id, username: @user.username })
-      render json: { token: @token, user: @user }, status: :created, location: @user
+      @token = encode({ user_id: @user.id })
+      render json: { user: @user, token: @token }, status: :created
     else
       render json: @user.errors, status: :unprocessable_entity
     end

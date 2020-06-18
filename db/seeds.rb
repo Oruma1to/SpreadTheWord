@@ -8,6 +8,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+User.destroy_all
+Post.destroy_all
+Comment.destroy_all
+
 # All users are created within this area
 @user = User.create!({ username: 'H3H3', email: 'H3H3@youtube.com', password: 'youtube', admin: true })
 @user = User.create!({ username: 'JonTron', email: 'JonTron@youtube.com', password: 'youtube', admin: false })
