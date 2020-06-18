@@ -84,8 +84,16 @@ export default class PostDetail extends Component {
             <img className="postDetail-image" src={post.img_url} alt={post.title} />
             <div className="postDetail-content">{post.content}</div>
           <div className="button-container">
-              <button className="edit-button"><Link className="edit-link" to={`/posts/${post.id}/edit`}>Edit</Link></button>
-              <button className="delete-button" onClick={this.deletedThisPost}>Delete</button>
+
+            {
+              this.props.currentUser && this.props.currentUser.id === post.user_id &&
+          
+              (<>
+                <button className="edit-button"><Link className="edit-link" to={`/posts/${post.id}/edit`}>Edit</Link></button>
+                <button className="delete-button" onClick={this.deletedThisPost}>Delete</button>
+              </>
+              )
+            }
             </div>
         </div>
         <div className="postDetail-commentSection">COMMENTS</div>
