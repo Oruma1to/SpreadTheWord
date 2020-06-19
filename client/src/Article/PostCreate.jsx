@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './PostCreate.css'
 
 
 export default class PostCreate extends Component {
@@ -23,7 +24,7 @@ export default class PostCreate extends Component {
 
     
     return (
-      <div className="create-container">
+      <div className="postCreate-container">
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -35,11 +36,13 @@ export default class PostCreate extends Component {
               content: ""
             })
           }}>
-          <h3>Create Post</h3>
-          <div className="title-label">
+          <h3 className="postCreate-formTitle">Create Post</h3>
+          <div className="postCreate-title">
             <label
-              htmlFor="title">Title:
+              htmlFor="title">
+              <p className='postCreate-formTitle'>Post Title</p>
         <input
+                className="postCreate-formlbl"
                 id="title"
                 type="text"
                 name="title"
@@ -50,10 +53,12 @@ export default class PostCreate extends Component {
             </label>
           </div>
           <br />
-          <div className="img_url-label">
+          <div className="postCreate-imgUrl">
             <label
-              htmlFor="img_url">Image Url:
+              htmlFor="img_url">
+              <p className='postCreate-formTitle'>Post Image Url</p>
         <input
+                className="postCreate-formlbl"
                 id="img_url"
                 type="text"
                 name="img_url"
@@ -64,9 +69,10 @@ export default class PostCreate extends Component {
             </label>
           </div>
           <br />
-          <div className="content-label">
+          <div className="postCreate-content">
             <label
-              htmlFor="content">Content:
+              htmlFor="content">
+              <p className='postCreate-formTitle'>Content</p>
         <textarea
                 id="content"
                 type="text"
@@ -79,7 +85,7 @@ export default class PostCreate extends Component {
               />
             </label>
           </div>
-          <button>Submit</button>
+          <button className="postCreate-submit">Submit</button>
         </form>
       </div>
     )
