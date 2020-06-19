@@ -15,8 +15,8 @@
 }
 
 .postDetail-image {
-  width: 1100px;
-  height: 700px
+  width: 1000px;
+  height: 600px
 }
 
 .postDetail-author {
@@ -25,9 +25,33 @@
 }
 
 .postDetail-content {
-  max-width: 80%;
+  text-indent: 60px;
+  max-width: 50%;
   margin: 40px 0 40px 0;
   text-align: justify;
+}
+
+.postDetail-edit {
+  background-color:#B2B1CF;
+}
+
+.postDetail-delete {
+  background-color:#B2B1CF;
+}
+
+.postDetail-btns *{
+  margin: 0 10px 20px 10px;
+  height: 50px;
+  width: 200px;
+  /* background-color:#B2B1CF; */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: yellow
+} 
+
+.edit-link {
+  padding: 10px
 }
 
 .postDetail-commentSection {
@@ -39,9 +63,21 @@
   margin: 20px 0;
 }
 
+.lac {
+  background-color: lightcoral;
+  color: white;
+  height: 50px;
+  width: 200px;
+  font-weight: bold;
+  font-size: 20px
+}
+
 .postDetail-comments {
-  max-width: 50%;
+  max-width: 40%;
   align-self: center;
   margin: 0 auto;
 }
 
+.postDetail-commentContainer {
+  text-align: center;
+}

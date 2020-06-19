@@ -71,29 +71,31 @@ export default class PostDetail extends Component {
     if (deleted) {
       return <Redirect to={'/'} />
     }
-    
+
     return (
-      
+
       <div className="postDetail-container">
-          <div className="postDetail-wrapper">
+        <div className="postDetail-wrapper">
           <div className="postDetail-title">{post.title}</div>
           <div className="postDetail-author">By {post.user.username}</div>
-            <img className="postDetail-image" src={post.img_url} alt={post.title} />
-            <div className="postDetail-content">{post.content}</div>
-          <div className="button-container">
+          <img className="postDetail-image" src={post.img_url} alt={post.title} />
+          <div className="postDetail-content">{post.content}</div>
+          <div className="postDetail-btns">
             {
               this.props.currentUser && this.props.currentUser.id === post.user_id | this.props.currentUser.admin === true &&
               (<>
-                <Link className="edit-link" to={`/posts/${post.id}/edit`}><button className="edit-button">Edit</button></Link>
-                <button className="delete-button" onClick={this.deletedThisPost}>Delete</button>
+                <Link to={`/posts/${post.id}/edit`}><button className="postDetail-edit" >Edit</button></Link>
+                <button className="postDetail-delete" onClick={this.deletedThisPost}>Delete</button>
               </>
               )
             }
-            </div>
+          </div>
         </div>
+        <div className="postDetail-commentContainer">
         <div className="postDetail-commentSection">COMMENTS</div>
-        <Link className="lac-button" to={`/posts/${post.id}/comment`} ><button className="lac">Leave a comment!</button></Link>
-        <div className="postDetail-comments">{COMMENTS}</div>
+        <Link className="lac-button" to={`/posts/${post.id}/comment`} ><button className="lac">Leave a comment!</button></Link>        </div>
+          <div className="postDetail-comments">{COMMENTS}</div>
+
       </div>
     )
   }
