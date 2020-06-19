@@ -30,9 +30,8 @@ The **Spread the Word** MVP will meet the requirements below for both front end 
 ### Server (Back End) <!-- omit in toc -->
 - Will utilize a **RESTful JSON API**.
   - This will be built using Ruby On Rails
-  - The database will contain the 4 following tables:
+  - The database will contain the 3 following tables:
     - user table
-    - admin table
     - post table
     - comment table
   - All models will be defined using Rails.
@@ -88,14 +87,17 @@ src
 
 |__ components/
       |__ Header.jsx
-      |__ Nav.jsx
-      |__ MainBody.jsx
-      |__ Article.jsx
-      |__ ArticlePage.jsx
-      |__ ArticleCreate.jsx
-      |__ Comment.jsx
-      |__ AdminEdit.jsx
-      |__ UserEdit.jsx
+      |__ HeaderNav.jsx
+      |__ Main.jsx
+      |__ Post.jsx
+      |__ Posts.jsx
+      |__ PostDetail.jsx
+      |__ PostCreate.jsx
+      |__ PostEdit.jsx
+      |__ Comments.jsx
+      |__ CommentCreate.jsx
+      |__ SignUp.jsx
+      |__ SignIn.jsx
 |__ services/
 ```
 <br>
@@ -121,16 +123,17 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Header integration  |    L     |     1 hr       |               |    TBD      |
-| NAV Bar integration |    L     |     2 hrs      |               |    TBD      |
-| Styling for Main    |    L     |     3 hrs      |               |    TBD      |
-| Article Layout      |    H     |     4 hrs      |               |    TBD      |
-| Article Page Layout |    L     |     3 hrs      |               |    TBD      |
-| Article Crud action |    H     |     4 hrs      |               |    TBD      |
-| Comment section Crud|    H     |     4 hrs      |               |    TBD      |
-| Admin Crud          |    H     |     6 hrs      |               |    TBD      |
-| User Profile Crud   |    H     |     6 hrs      |               |    TBD      |
-| Total               |          |     36 hrs      |               |    TBD      |
+| Header integration  |    L     |     1 hr       |               |    1 hr     |
+| NAV Bar integration |    L     |     2 hrs      |               |    1 hr     |
+| Styling for Main    |    L     |     3 hrs      |               |    4 hrs    |
+| Post Layout         |    H     |     4 hrs      |               |    3 hrs    |
+| Posts Page Layout   |    L     |     3 hrs      |               |    3 hrs    |
+| PostCrud action     |    H     |     4 hrs      |               |    7 hrs    |
+| Comment section Crud|    H     |     4 hrs      |               |    4 hrs    |
+| Admin Crud          |    H     |     6 hrs      |               |    4 hrs    |
+| CSS                 |    H     |     6 hrs      |               |    8 hrs    |
+| Error Handling      |    H     |     6 hrs      |               |    12 hrs   |
+| Total               |          |     39 hrs     |               |    47 hrs   |
 
 <br>
 
