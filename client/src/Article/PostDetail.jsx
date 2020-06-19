@@ -67,14 +67,11 @@ export default class PostDetail extends Component {
     const COMMENTS = comments.map((comment, index) =>
       <Comments id={comment.id} pid={comment.post_id} key={index} content={comment.content} user={comment.user} updated_at={comment.updated_at} />
     )
-
     const { post, deleted } = this.state
     if (deleted) {
       return <Redirect to={'/'} />
     }
     
-    
-    console.log(this.props)
     return (
       
       <div className="postDetail-container">
@@ -87,7 +84,7 @@ export default class PostDetail extends Component {
             {
               this.props.currentUser && this.props.currentUser.id === post.user_id | this.props.currentUser.admin === true &&
               (<>
-                <button className="edit-button"><Link className="edit-link" to={`/posts/${post.id}/edit`}>Edit</Link></button>
+                <Link className="edit-link" to={`/posts/${post.id}/edit`}><button className="edit-button">Edit</button></Link>
                 <button className="delete-button" onClick={this.deletedThisPost}>Delete</button>
               </>
               )
@@ -95,6 +92,7 @@ export default class PostDetail extends Component {
             </div>
         </div>
         <div className="postDetail-commentSection">COMMENTS</div>
+        <Link className="lac-button" to={`/posts/${post.id}/comment`} ><button className="lac">Leave a comment!</button></Link>
         <div className="postDetail-comments">{COMMENTS}</div>
       </div>
     )

@@ -6,7 +6,7 @@ import './App.css'
 
 export default class App extends Component {
   state = {
-    currentUser: null
+    currentUser: null,
   }
 
   componentDidMount() {

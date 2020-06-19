@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { getAllUsers, createUser, deleteUser } from '../services/users'
 import { createPost } from '../services/posts'
+import { createComment} from '../services/comments'
 import PostCreate from '../Article/PostCreate'
 import SignIn from '../AuthComponents/SignIn'
 import SignUp from '../AuthComponents/SignUp'
 import Posts from '../Article/Posts'
 import PostDetail from '../Article/PostDetail'
 import PostEdit from '../Article/PostEdit'
+import CommentCreate from '../Article/CommentCreate'
 export default class Main extends Component {
   state = {
     users: [],
@@ -26,9 +28,13 @@ export default class Main extends Component {
     }))
   }
 
-  // ============================
-  // ========== Users ===========
-  // ============================
+  createComment = async (commentData) => {
+    const newComment = await createComment(commentData)
+    this.setState(prevState => ({
+      comments: [...prevState.comments, newComment]
+    }))
+  }
+
   getUsers = async () => {
     const users = await getAllUsers()
     this.setState({ users })
@@ -60,7 +66,8 @@ export default class Main extends Component {
           <Route exact path="/" render={() => <Posts />} />
           <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} currentUser={this.props.currentUser}/>} />
           <Route path='/new/post' render={(props) => (<PostCreate {...props} createPost={createPost} />)} />
-          <Route exact path="/posts/:id/edit" render={(props) => <PostEdit {...props} currentUser={this.props.currentUser} history={props.history}/> } />
+          <Route exact path="/posts/:id/edit" render={(props) => <PostEdit {...props} currentUser={this.props.currentUser} history={props.history} />} />
+          <Route path='/posts/:id/comment' render={(props) => (<CommentCreate {...props} currentUser={this.props.currentUser} createComment={createComment}/>)} />
         </Switch>
       </main>
     )

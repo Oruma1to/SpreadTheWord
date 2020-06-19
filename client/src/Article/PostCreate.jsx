@@ -44,6 +44,7 @@ export default class PostCreate extends Component {
                 type="text"
                 name="title"
                 value={title}
+                required
                 onChange={this.handleChange}
               />
             </label>
@@ -57,6 +58,7 @@ export default class PostCreate extends Component {
                 type="text"
                 name="img_url"
                 value={img_url}
+                required
                 onChange={this.handleChange}
               />
             </label>
@@ -65,11 +67,14 @@ export default class PostCreate extends Component {
           <div className="content-label">
             <label
               htmlFor="content">Content:
-        <input
+        <textarea
                 id="content"
                 type="text"
+                rows={10}
+                cols={78}
                 name="content"
                 value={content}
+                required
                 onChange={this.handleChange}
               />
             </label>
