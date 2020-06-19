@@ -1,0 +1,54 @@
+.postEdit-container { 
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  background-color: lightslategrey;
+}
+
+.postEdit-image {
+  height: 400px;
+  width: 600px;
+  margin: 50px 0 40px 0
+}
+
+.postEdit-form  {
+  display: flex;
+  flex-direction: column;
+}
+
+.postEdit-imglink {
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto
+}
+
+.postEdit-title {
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto
+}
+
+.postEdit-formTitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 0 5px 0;
+  color: lightgreen
+}
+
+.buttonDiv {
+  text-align: center;
+}
+
+.postEdit-save {
+  margin: 0 10px 20px 10px;
+  height: 50px;
+  width: 200px;
+  background-color: #B2B1CF;
+  font-weight: bold;
+  font-size: 20px;
+  color: white
+}
+
