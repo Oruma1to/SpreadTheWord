@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './CommentCreate.css'
 
 
 
@@ -20,7 +21,7 @@ state = {
     const { currentUser, postComment, history } = this.props;
     console.log(this.props.match.params.id)
     return (
-      <div className="create-container">
+      <div className="commentCreate-container">
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -30,10 +31,10 @@ state = {
               content: ""
             })
           }}>
-          <h3>Leave a Comment</h3>
-          <div className="content-label">
+          <p className="commentCreate-title">Leave a Comment</p>
+          <div className="commentCreate-label">
             <label
-              htmlFor="content">Content:
+              htmlFor="content">
         <textarea
                 id="content"
                 type="text"
@@ -47,7 +48,7 @@ state = {
               />
             </label>
           </div>
-          <button>Submit</button>
+          <button className="commentCreate-submit">Submit</button>
         </form>
       </div>
     )

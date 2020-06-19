@@ -2,7 +2,6 @@ import React from "react"
 import './Comments.css'
 
 const Comments = (props) => {
-  console.log(props)
   
   return (
     <>

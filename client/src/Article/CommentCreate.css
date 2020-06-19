@@ -1,0 +1,28 @@
+.commentCreate-container {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0px 20px 10px;
+  justify-content: center;
+  box-shadow: 0 0 17px 2px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  width: 700px;
+  height: 500px;
+  background-color: #B2B1CF
+}
+
+.commentCreate-title {
+  margin: 0px 0 60px 0;
+  font-size: 30px;
+}
+
+.commentCreate-submit {
+  margin: 40px 0px 0px 0px;
+  height: 50px;
+  width: 200px;
+  background-color: palevioletred;
+  font-weight: bold;
+  font-size: 20px;
+  color: white
+}

@@ -9,8 +9,6 @@ export default function HeaderNav(props) {
       <Link to="/" className="headerNavLink">Home</Link>
       <Link to="" className="headerNavLink">Latest</Link>
       <Link to="" className="headerNavLink">Beginners Guide</Link>
-      <Link to="" className="headerNavLink">Youtube Creators</Link>
-      <Link to="" className="headerNavLink">Twitch Creators</Link>
       {props.currentUser
           ?
           <><Link to="/new/post"className="headerNavLink">New Post</Link></>
