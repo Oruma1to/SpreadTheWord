@@ -26,3 +26,16 @@
   text-decoration: none;
   color: black
 }
+
+
+@media (max-width: 494px) {
+  .post-wrapper {
+    width: 350px;
+    height: 250px
+  }
+  .post-image {
+    width: 350px;
+    height: 200px
+  }
+  
+}

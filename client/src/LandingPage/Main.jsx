@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { getAllUsers, createUser, deleteUser } from '../services/users'
 import { createPost } from '../services/posts'
-import { createComment} from '../services/comments'
+import { createComment } from '../services/comments'
 import PostCreate from '../Article/PostCreate'
 import SignIn from '../AuthComponents/SignIn'
 import SignUp from '../AuthComponents/SignUp'
@@ -28,6 +28,8 @@ export default class Main extends Component {
     }))
   }
 
+/////////////////////////////////////////////////////////
+
   createComment = async (commentData) => {
     const newComment = await createComment(commentData)
     this.setState(prevState => ({
@@ -35,11 +37,13 @@ export default class Main extends Component {
     }))
   }
 
+/////////////////////////////////////////////////////////
+  
   getUsers = async () => {
     const users = await getAllUsers()
     this.setState({ users })
   }
-  
+
 
   postUser = async (userData) => {
     const newUser = await createUser(userData)
@@ -55,7 +59,7 @@ export default class Main extends Component {
     }))
   }
 
-  
+
 
   render() {
     return (
@@ -63,11 +67,11 @@ export default class Main extends Component {
         <Switch>
           <Route path='/user/login' render={(props) => (<SignIn {...props} handleLoginSubmit={this.props.handleLoginSubmit} />)} />
           <Route path='/user/register' render={(props) => (<SignUp {...props} handleRegisterSubmit={this.props.handleRegisterSubmit} />)} />
-          <Route exact path="/" render={() => <Posts />} />
-          <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} currentUser={this.props.currentUser}/>} />
+          <Route exact path="/" render={(props) => <Posts {...props} currentUser={this.props.currentUser}/>} />
+          <Route exact path="/posts/:id" render={(props) => <PostDetail {...props} history={props.history} currentUser={this.props.currentUser} />} />
           <Route path='/new/post' render={(props) => (<PostCreate {...props} createPost={createPost} />)} />
           <Route exact path="/posts/:id/edit" render={(props) => <PostEdit {...props} currentUser={this.props.currentUser} history={props.history} />} />
-          <Route path='/posts/:id/comment' render={(props) => (<CommentCreate {...props} currentUser={this.props.currentUser} createComment={createComment}/>)} />
+          <Route path='/posts/:id/comment' render={(props) => (<CommentCreate {...props} currentUser={this.props.currentUser} createComment={createComment} />)} />
         </Switch>
       </main>
     )

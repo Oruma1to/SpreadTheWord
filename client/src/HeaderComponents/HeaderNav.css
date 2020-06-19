@@ -20,3 +20,24 @@
   margin: 10px;
   font-size: 17px;
 }
+
+.headerNavAdmin {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 10px;
+  font-size: 17px;
+}
+
+
+@media (max-width: 608px) {
+  .headerNavLink {
+    font-size: 16px;
+  }
+  .headerNavUser {
+    font-size: 16px;
+  }
+  .headerNavAdmin {
+    font-size: 16px;
+  }
+}

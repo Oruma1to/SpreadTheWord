@@ -7,7 +7,7 @@
   justify-content: center;
   box-shadow: 0 0 17px 2px rgba(0, 0, 0, 0.5);
   font-weight: bold;
-  width: 700px;
+  max-width: 40%;
   height: 500px;
   background-color: #B2B1CF
 }
@@ -20,9 +20,19 @@
 .commentCreate-submit {
   margin: 40px 0px 0px 0px;
   height: 50px;
-  width: 200px;
+  width: 40%;
   background-color: palevioletred;
   font-weight: bold;
   font-size: 20px;
   color: white
+}
+
+.commentCreate-input {
+  max-width: 80%
+}
+
+@media (max-width: 630px) {
+  .commentCreate-title {
+    font-size: 20px;
+  }
 }

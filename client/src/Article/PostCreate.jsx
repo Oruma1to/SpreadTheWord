@@ -36,7 +36,7 @@ export default class PostCreate extends Component {
               content: ""
             })
           }}>
-          <h3 className="postCreate-formTitle">Create Post</h3>
+          <h3 className="postCreate-descrip">Create Post</h3>
           <div className="postCreate-title">
             <label
               htmlFor="title">
@@ -73,7 +73,8 @@ export default class PostCreate extends Component {
             <label
               htmlFor="content">
               <p className='postCreate-formTitle'>Content</p>
-        <textarea
+              <textarea
+                className="postCreate-formlbl"
                 id="content"
                 type="text"
                 rows={10}

@@ -43,7 +43,6 @@
   margin: 0 10px 20px 10px;
   height: 50px;
   width: 200px;
-  /* background-color:#B2B1CF; */
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
@@ -69,7 +68,8 @@
   height: 50px;
   width: 200px;
   font-weight: bold;
-  font-size: 20px
+  font-size: 20px;
+  margin:10px 0 40px 0
 }
 
 .postDetail-comments {

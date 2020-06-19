@@ -6,25 +6,18 @@
 }
 
 .postEdit-image {
-  height: 400px;
-  width: 600px;
+  max-height: 400px;
+  max-width: 40%;
   margin: 50px 0 40px 0
 }
 
 .postEdit-form  {
   display: flex;
   flex-direction: column;
+  max-width: 40%
 }
 
-.postEdit-imglink {
-  height: 20px;
-  width: 100%;
-  text-align: center;
-  margin: 0 auto
-}
-
-.postEdit-title {
-  height: 20px;
+.postEdit-input {
   width: 100%;
   text-align: center;
   margin: 0 auto

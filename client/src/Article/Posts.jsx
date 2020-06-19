@@ -12,7 +12,6 @@ export default class Posts extends Component {
     }
   }
   
-  //All of my posts are now set to state here
   async componentDidMount() {
     const posts = await getAllPosts();
     this.setState({ posts });
@@ -28,7 +27,7 @@ export default class Posts extends Component {
         <div className="main-container">
           <div className="main-wrapper">
           <img className="main-intro-image" src="https://lumen5.com/learn/wp-content/uploads/2019/05/Become-a-Better-Content-Creator-with-These-13-Tools.jpg" alt="youtube and twitch" />
-            <h2 className="main-content">Welcome to Spread the Word! The platform dedicated to providing up and coming youtube and twitch content creators with the resources needed to gain some momentum on their respective platforms! All of our articles are sourced from the content communities themselves, with the help of some of the most famous content creators on the planet!</h2>
+            <p className="main-content">Welcome to Spread the Word! The platform dedicated to providing up and coming youtube and twitch content creators with the resources needed to gain some momentum on their respective platforms! All of our articles are sourced from the content communities themselves, with the help of some of the most famous content creators on the planet!</p>
           </div>
           <p className="latest-posts">LATEST POSTS</p>
         </div>

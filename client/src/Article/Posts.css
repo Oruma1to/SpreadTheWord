@@ -17,9 +17,12 @@
 }
 
 .main-content {
-  text-align: center;
+  text-align: justify;
   max-width: 60%;
   align-self: center;
+  text-indent: 80px;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .latest-posts {
@@ -36,4 +39,23 @@
   flex-wrap: wrap;
   margin: 0 auto 0 auto;
   justify-content: center;
+}
+
+@media (max-width: 670px) {
+  .main-content {
+    font-size: 20px;
+  }
+
+  .latest-posts {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 494px) {
+  .latest-posts {
+    font-size: 30px;
+  }
+  .main-content {
+    font-size: 15px
+  }
 }

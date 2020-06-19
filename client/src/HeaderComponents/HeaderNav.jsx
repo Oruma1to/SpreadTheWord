@@ -17,7 +17,15 @@ export default function HeaderNav(props) {
       }
       {props.currentUser
           ?
-          <><p className="headerNavUser">{props.currentUser.username}</p><Link to=""className="headerNavLink" onClick={props.handleLogout}>Logout</Link></>
+        <>
+          {props.currentUser.admin === true 
+            ?
+            <p className="headerNavAdmin">{props.currentUser.username} (Admin)</p>
+            :
+            <p className="headerNavUser">{props.currentUser.username}</p>
+          }
+
+          <Link to="" className="headerNavLink" onClick={props.handleLogout}>Logout</Link></>
           :
           <></>
       }

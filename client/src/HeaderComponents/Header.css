@@ -8,10 +8,6 @@
   text-align: center;
   background-color: #80F5D2;
 }
-/* 
-.header-wrapper {
-  margin: 0 auto
-} */
 
 .site-title {
   text-align:center;
@@ -20,4 +16,19 @@
   font-family: 'Monoton', cursive;
   font-weight: 500;
   color: #031926
+}
+
+
+
+@media (max-width: 670px) {
+  .site-title {
+    font-size: 40px;
+    margin: 80px 0 19px 0
+  }
+}
+
+@media (max-width: 494px) {
+  .site-title {
+    font-size: 30px;
+  }
 }

@@ -55,7 +55,7 @@ class PostEdit extends Component {
             <p className="postEdit-formTitle">Image Url</p>
             <label htmlFor="img_url">
               <input
-                className="postEdit-imglink"
+                className="postEdit-input"
                 placeholder='Image Url'
                 value={post.img_url}
                 name='img_url'
@@ -67,7 +67,7 @@ class PostEdit extends Component {
             <p className="postEdit-formTitle">Post Title</p>
             <label htmlFor="title">
               <input
-                className="postEdit-title"
+                className="postEdit-input"
                 placeholder='Name'
                 value={post.title}
                 name='title'
@@ -80,7 +80,7 @@ class PostEdit extends Component {
             <p className="postEdit-formTitle">Content</p>
             <label htmlFor="content">
               <textarea
-                className="postEdit-content"
+                className="postEdit-input"
                 rows={10}
                 cols={78}
                 placeholder='Content'

@@ -35,7 +35,8 @@ state = {
           <div className="commentCreate-label">
             <label
               htmlFor="content">
-        <textarea
+              <textarea
+                className="commentCreate-input"
                 id="content"
                 type="text"
                 rows={10}
