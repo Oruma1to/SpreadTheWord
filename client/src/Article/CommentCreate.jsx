@@ -24,7 +24,7 @@ state = {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            createComment(this.state);
+            createComment(this.state, this.props.match.params.id);
             history.push(`/posts/${this.props.match.params.id}`);
             this.setState({
               content: ''

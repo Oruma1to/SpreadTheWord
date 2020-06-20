@@ -64,7 +64,8 @@ export default class PostDetail extends Component {
     const comments = this.state.comments
 
     const COMMENTS = comments.map((comment, index) =>
-      <Comments id={comment.id} pid={comment.post_id} key={index} content={comment.content} user={comment.user} updated_at={comment.updated_at} />
+      <Comments id={comment.id} pid={comment.post_id} key={index} content={comment.content} user={comment.user} updated_at={new Date (comment.updated_at).toLocaleString
+        ()} />
     )
     const { post, deleted } = this.state
     if (deleted) {
