@@ -10,25 +10,24 @@ state = {
 
 
   handleChange = (e) => {
-    const { value } = e.target;
+    const { name, value } = e.target;
     this.setState({
-      name: value
+      [name]: value
     })
   }
 
   render() {
-    const { content } = this.state;
-    const { currentUser, postComment, history } = this.props;
-    console.log(this.props.match.params.id)
+    const { content } = this.state
+    const { createComment, history } = this.props;
     return (
       <div className="commentCreate-container">
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            postComment(this.state);
+            createComment(this.state);
             history.push(`/posts/${this.props.match.params.id}`);
             this.setState({
-              content: ""
+              content: ''
             })
           }}>
           <p className="commentCreate-title">Leave a Comment</p>
