@@ -2,6 +2,8 @@
 
 ![PowerPoint!](https://govloop.com/wp-content/uploads/2016/08/powerpoint-hacks.gif)
 
+Published to [SpreadTheWord.surge.sh](http://SpreadTheWord.surge.sh)
+
 ## Table of Contents <!-- omit in toc -->
 - [Overview](#overview)
 - [MVP](#mvp)
