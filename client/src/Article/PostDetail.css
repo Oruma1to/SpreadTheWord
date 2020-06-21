@@ -72,6 +72,16 @@
   margin:10px 0 40px 0
 }
 
+.lac-message {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.lac-signup {
+  text-decoration: none;
+  color: blue
+}
+
 .postDetail-comments {
   max-width: 40%;
   align-self: center;

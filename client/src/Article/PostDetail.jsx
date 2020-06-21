@@ -92,8 +92,18 @@ export default class PostDetail extends Component {
           </div>
         </div>
         <div className="postDetail-commentContainer">
-        <div className="postDetail-commentSection">COMMENTS</div>
-        <Link className="lac-button" to={`/posts/${post.id}/comment`} ><button className="lac">Leave a comment!</button></Link>        </div>
+          <div className="postDetail-commentSection">COMMENTS</div>
+
+
+          {this.props.currentUser
+            ?
+            <Link className="lac-button" to={`/posts/${post.id}/comment`} ><button className="lac">Leave a comment!</button></Link>
+            :
+            <><p className="lac-message"><Link className="lac-signup" to="/user/register">Sign Up</Link> to leave a comment!</p></>
+          }
+            </div>
+          
+
           <div className="postDetail-comments">{COMMENTS}</div>
 
       </div>
