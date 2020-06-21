@@ -80,30 +80,32 @@ export default class PostDetail extends Component {
           <div className="postDetail-author">By {post.user.username}</div>
           <img className="postDetail-image" src={post.img_url} alt={post.title} />
           <div className="postDetail-content">{post.content}</div>
-          <div className="postDetail-btns">
+          
             {
-              this.props.currentUser && this.props.currentUser.id === post.user_id | this.props.currentUser.admin === true &&
-              (<>
-                <Link to={`/posts/${post.id}/edit`}><button className="postDetail-edit" >Edit</button></Link>
+            this.props.currentUser && this.props.currentUser.id === post.user_id | this.props.currentUser.admin === true
+              ?
+              (<div className="postDetail-btns">
+              <Link to={`/posts/${post.id}/edit`}><button className="postDetail-edit" >Edit</button></Link>
+              
                 <button className="postDetail-delete" onClick={this.deletedThisPost}>Delete</button>
-              </>
+              </div>
               )
+              :
+              <></>
             }
-          </div>
+      
         </div>
         <div className="postDetail-commentContainer">
           <div className="postDetail-commentSection">COMMENTS</div>
-
 
           {this.props.currentUser
             ?
             <Link className="lac-button" to={`/posts/${post.id}/comment`} ><button className="lac">Leave a comment!</button></Link>
             :
-            <><p className="lac-message"><Link className="lac-signup" to="/user/register">Sign Up</Link> to leave a comment!</p></>
+            <><p className="lac-message"><Link className="lac-signup" to="/user/register">Sign Up</Link> or <Link className="lac-signin" to="/user/login">Sign In</Link> to leave a comment!</p></>
           }
             </div>
           
-
           <div className="postDetail-comments">{COMMENTS}</div>
 
       </div>
