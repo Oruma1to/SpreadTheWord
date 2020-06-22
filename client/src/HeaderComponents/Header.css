@@ -30,5 +30,7 @@
 @media (max-width: 494px) {
   .site-title {
     font-size: 30px;
+    margin-bottom: 40px;
   }
+  
 }

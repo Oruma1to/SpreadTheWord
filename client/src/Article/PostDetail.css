@@ -26,7 +26,7 @@
 
 .postDetail-content {
   text-indent: 60px;
-  max-width: 50%;
+  max-width: 80%;
   margin: 40px 0 40px 0;
   text-align: justify;
 }
@@ -95,4 +95,40 @@
 
 .postDetail-commentContainer {
   text-align: center;
+}
+
+
+@media (max-width: 1050px) {
+  
+  .postDetail-image {
+  width: 700px ;
+  height: 450px
+  }
+}
+
+@media (max-width: 800px) {
+  .postDetail-image {
+    width: 500px;
+    height:300px
+  }
+}
+
+@media (max-width: 500px) {
+  .postDetail-image {
+    width: 400px;
+    height: 300px
+  }
+  .postDetail-title {
+    font-size: 30px
+  }
+  .postDetail-edit {
+    width:100px
+  }
+  .postDetail-delete {
+    width: 100px
+  }
+  .lac {
+    width: 100px;
+    font-size: 15px
+  }
 }
